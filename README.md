@@ -1,6 +1,14 @@
-# oss-website
+# SER375 Open Source Development Project Website
+## What is this?
+This website displays the various projects completed by students in Quinnipiac's SER375 course.
 
-## Project setup
+## Access the website
+_Not available yet_
+
+## How to add your own project
+_Not available yet_
+
+## Local project setup
 ```
 npm install
 ```
