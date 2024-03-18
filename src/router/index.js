@@ -20,10 +20,10 @@ const routes = [
     component: twoColumnTemplate
   },
   {
-    path: '/project/:name',
-    name: 'project-name',
+    path: '/project/:title/:author',
+    name: 'ProjectDetails',
     component: twoColumnTemplate,
-    //props: ['projectName']
+    props: true
   },
 
   // {

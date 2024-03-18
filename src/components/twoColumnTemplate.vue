@@ -35,7 +35,12 @@ export default {
         triumphs: String,
         pictures: Array,
         video: String
-    }
+    },
+    mounted() {
+        console.log(this.$route.params.title);
+        console.log(this.$route.params.author);
+    },
+
 }
 </script>
 

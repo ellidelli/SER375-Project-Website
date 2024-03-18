@@ -1,12 +1,14 @@
-<!-- SearchResult.vue -->
 <template>
-    <router-link :to="projectRoute" class="search-result">
-        <div class="result-info">
-            <h3>{{ title }}</h3>
-            <p>by {{ author }}</p>
+    <router-link :to="{ name: 'ProjectDetails', params: { title: title, author: author } }">
+        <div class="search-result">
+            <div class="result-info">
+                <h3>{{ title }}</h3>
+                <p>by {{ author }}</p>
+            </div>
         </div>
     </router-link>
 </template>
+
   
 <script>
 export default {
@@ -22,6 +24,11 @@ export default {
     },
     created() {
         this.projectRoute = `/project/${this.title.replace(' ', '-')}-${this.author.replace(' ', '-')}`;
+    },
+    computed: {
+        projectRoute() {
+            return `/project/${encodeURIComponent(this.title)}/${encodeURIComponent(this.author)}`
+        }
     },
 };
 </script>
